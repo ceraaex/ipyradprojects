@@ -26,7 +26,5 @@ ipyrad -p params-CFFE_group1.txt -s 7
 ##FINISHED ipyrad##
 ###################
 
-###################
-##START Structure##
-###################
+
 
