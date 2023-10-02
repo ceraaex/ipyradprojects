@@ -1,0 +1,12 @@
+name: ipyrad_project
+channels:
+  - conda-forge
+  - bioconda
+  - base
+  - R
+dependencies:
+  - r-base=4.1.3
+  - r-tidyverse=1.3.2
+  - snakemake==7.32.4
+  - python=3.9.18
+  - ipyrad=0.9.93
