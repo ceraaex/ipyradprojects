@@ -1,0 +1,8 @@
+#Input files
+resources: /work/ceraaex/ipyrad_projects/resources
+Trep_ref: /work/ceraaex/Genome/TrR_v6_haploid_reference.fasta
+
+#Output
+results_prefix: /work/ceraaex/ipyrad_projects/results
+log_prefix: /work/ceraaex/ipyrad_projects/log
+
