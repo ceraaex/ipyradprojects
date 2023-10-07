@@ -9,6 +9,7 @@ configfile: '../config/loniqbc.yaml'
 
 #CFFE Lanes
 LANES = ['CFFE_group1', 'CFFE_group2', 'CFFE_group3']
+K = [1:10]
 
 #Path to resource files
 RESOURCES = os.path.abspath(config['resources'])
@@ -18,11 +19,9 @@ CFFE_FASTA_DIR = f"{RESOURCES}/CFFE_fastas"
 
 #Output files
 LOG_DIR = config['log_prefix']
-DEMUX_DIR = f"config['results']/demux_out"
-IPYRAD_DIR= f"{config['results_prefix']}/ipyrad_out"
-ADMIX_DIR = f"{config['results_prefix']}/admix_out"
-PLINK_DIR = f"{config['results_prefix']}/plink_out"
-MODEL_DIR = f"{config['results_prefix']}/model_out"
+IPYRAD_DIR= f"{config['results_prefix']}/ipyrad"
+ADMIX_DIR = f"{config['results_prefix']}/admix"
+MODEL_DIR = f"{config['results_prefix']}/model"
 FIGURES_DIR = f"{config['results_prefix']}/figures"
 
 rule all: 
@@ -30,15 +29,14 @@ rule all:
         f'{DEMUX_DIR}/demux.done',
         f'{IPYRAD_DIR}/ipyrad.done',
         f'{ADMIX_DIR}/admix.done',
-        f'{PLINK_DIR}/plink.done',
         f'{MODEL_DIR}/model.done',
         f'{FIGURES_DIR}/figures.done'
 
 include: 'rules/ipyrad.smk'
 include: 'rules/plink.smk'
-include: 'rules/admix.smk'
 include: 'rules/model.smk'
 
 wildcard_constraints:
     lanes = '|'.join(LANES),
+    k = '|'.join{K}
     
