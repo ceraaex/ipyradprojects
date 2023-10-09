@@ -20,7 +20,7 @@ K_value=$(grep -h CV log*.out | sed 's| ||g' | awk 'BEGIN {FS=":"} {print $1,$2}
 
 #Move K value to seperate directory
 mkdir K_best
-mv prunedCFFE.$K_value.* ./K_best
+mv log$K_value.* ./K_best
 
 
 

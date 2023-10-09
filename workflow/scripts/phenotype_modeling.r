@@ -1,5 +1,5 @@
 pacman::p_load(EnvStats,dplyr,Rmisc,MASS,vcd,fitdistrplus)
-# testdf=data.frame("Populations"=rep(c(1,2,3,4,5),20),"Treatment"=rep(c("Drought","Control"),50),"P1"=runif(100,min=0,max=1),"P2"=runif(100,min=0,max=50),"P3"=runif(100,min=0,max=1.5),"P4"=as.integer(seq(1,100,1)))
+testdf=data.frame("Populations"=rep(c(1,2,3,4,5),20),"Treatment"=rep(c("Drought","Control"),50),"P1"=runif(100,min=0,max=1),"P2"=runif(100,min=0,max=50),"P3"=runif(100,min=0,max=1.5),"P4"=as.integer(seq(1,100,1)))
 
 #plot distribution and qq line of phenotypes
 if((ncol(testdf)-2)%%2 > 0){
