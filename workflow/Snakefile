@@ -33,7 +33,7 @@ rule all:
         f'{FIGURES_DIR}/figures.done'
 
 include: 'rules/ipyrad.smk'
-include: 'rules/plink.smk'
+include: 'rules/admix.smk'
 include: 'rules/model.smk'
 
 wildcard_constraints:
