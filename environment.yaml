@@ -1,8 +1,10 @@
+name: ipyrad
 channels:
   - conda-forge
   - bioconda
 dependencies:
-  - python=3.11.5
+  - python=3.10
   - snakemake=7.32.4
   - graphviz
-  
+  - mamba
+  - vcftools

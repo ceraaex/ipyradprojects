@@ -1,6 +1,6 @@
 rule ipyrad_params:
     input:
-        R1 = f"{CFFE_FASTA_DIR}/{{LANES}}_R1"
+        R1 = f"{CFFE_FASTA_DIR}/{LANES}_R1"
         R2 = f"{CFFE_FASTA_DIR}/{{LANES}}_R2"
     output: 
         R1_param = f"{IPYRAD_DIR}/params-{{LANES}}_R1.txt"
